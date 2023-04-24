@@ -1,0 +1,245 @@
+body {
+  text-align: center;
+}
+canvas {
+  pointer-events: none; /* make the canvas transparent to the mouse - needed since canvas is position infront of image */
+  position: absolute;
+}
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #97550a5d;
+  z-index: 9;
+  cursor: pointer;
+}
+
+#text {
+  font-family: "Scheherazade", serif;
+  border: 7px #f7931e;
+  border-style: solid;
+  padding: 7px;
+  padding-top: 7%;
+  position: absolute;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1);
+  /* width: 50%;
+  height: 50%; */
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-decoration: none;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: #fefcdb;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+@media (max-width: 500px) {
+  #text {
+    width: 50%;
+    height: 4%;
+  }
+}
+@media (min-width: 500px) {
+  #text {
+    width: 50%;
+    height: 40%;
+  }
+}
+img {
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #685814;
+  margin: 3px;
+  font-family: El Messiri;
+  font-size: -webkit-xxx-large;
+}
+a:hover {
+  text-decoration: none;
+  color: #fa7a09;
+  margin: 3px;
+  border-bottom: none;
+}
+img {
+  margin: 0 auto;
+  height: auto;
+  max-width: 100%;
+  border: none;
+  display: block;
+  padding: 5px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  img {
+    width: 100%;
+    height: auto;
+    margin-top: 50%;
+  }
+}
+.team-popup-close {
+  position: absolute;
+  z-index: 999;
+  top: -20px;
+  right: 10px;
+  color: #685814;
+  font-size: 50px;
+}
+
+hr {
+  border: 1px solid #685814;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.so {
+  padding-right: 100%;
+  background-color: f0e8e8;
+}
+
+#parent #popup {
+  display: none;
+}
+
+#parent:hover #popup {
+  display: block;
+}
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.navInner {
+  display: flex;
+}
+
+.navInner div {
+  color: black;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.8em 1.5em;
+  margin: 0.5em -0.4em;
+}
+
+.navInner div:hover {
+  background-color: #eee;
+  z-index: 99;
+}
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

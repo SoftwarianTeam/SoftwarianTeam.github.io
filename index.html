@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>الخطة التفاعلية</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Softwarian_Logo.png" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=El%20Messiri">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@1&display=swap" rel="stylesheet">
+ <style>
+   .mom{
+    position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgb(126, 118, 118);
+   color: white;
+   text-align: center;
+   font-family: 'El Messiri';
+   }
+   @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
+html {
+  background: rgb(41, 41, 41);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(41, 41, 41, 1) 0%,
+    rgba(24, 30, 48, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(41, 41, 41, 1) 0%,
+    rgba(24, 30, 48, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(41, 41, 41, 1) 0%,
+    rgba(24, 30, 48, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#292929",endColorstr="#181e30",GradientType=1);
+  height: 100%;
+  width: 100%;
+}
+
+div {
+  font-family: "Merriweather", serif;
+  font-size: 2rem;
+}
+
+p,
+.Anc {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 2rem;
+  color: #f7941d;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem;
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+ul li {
+  padding: 1rem;
+}
+
+.fab {
+  font-size: 5rem;
+}
+
+/* transition for social icon hover animation */
+.momen,
+.fa-facebook,
+.fa-youtube,
+.fa-instagram{
+  transition: 0.4s;
+  cursor: pointer;
+}
+/* social media icons hover color */
+.fa-facebook:hover,
+.fa-facebook:focus {
+  color: #1877f2;
+  transform: scale(1.1);
+}
+
+.fa-youtube:hover,
+.fa-youtube:focus {
+  color: #df2426;
+  transform: scale(1.1);
+}
+
+.fa-instagram:hover,
+.fa-instagram:focus {
+  color: #bd22a2;
+  transform: scale(1.1);
+}
+.momen:hover,
+.momen:focus {
+  color: #f7941d;
+  transform: scale(1.1);
+}
+
+</style>
+
+<style>
+
+area[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: -100%;
+  left: 0;
+}
+</style>
+
+<style>
+    h2 {
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #fff; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+} 
+
+h2 span { 
+  background: #24262b; 
+  color: white;
+    padding:0 10px; 
+}
+</style>
+
+<style>
+    :root {
+  --footer-bg: #1c2444;
+  --color: #f2f3fb;
+  --color-smooth: #9da2ae;
+  --input-border: #3a456a;
+  --btn-bg-color: #f1f2fc;
+  --btn-hover-bg: #d5d9f6;
+  --btn-color: #1e2641;
+}
+
+footer {
+  font-size: 16px;
+  background: var(--footer-bg);
+  padding: 2em 4em;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 1em;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+footer ul {
+  list-style: none;
+}
+
+.col {
+  flex: 1;
+}
+
+.col-title {
+  font-family: "Merriweather", serif;
+  color: var(--color);
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 0.5em 0;
+}
+
+.col-list a {
+  color: var(--color-smooth);
+  text-decoration: none;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.col-list a:hover,
+.col-list a:focus {
+  text-decoration: underline;
+}
+
+.subscribe-form,
+.social-media {
+  display: flex;
+  gap: 0.5em;
+  padding: 0.5em 0;
+}
+
+.subscribe-input {
+  width: auto;
+  flex: 1;
+  background: transparent;
+  border: 0.06em solid var(--input-border);
+  font-size: 1em;
+  font-weight: 500;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  transition: all 0.25s ease 0s;
+  display: inline-block;
+  color: var(--color-smooth);
+}
+
+.subscribe-input:focus {
+  outline: none;
+  border-color: var(--color);
+  color: var(--color);
+}
+
+.subscribe-btn {
+  background: var(--btn-bg-color);
+  border: none;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  transition: all 0.25s ease 0s;
+  display: inline-block;
+  color: var(--btn-color);
+  cursor: pointer;
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background: var(--btn-hover-bg);
+}
+
+.form-title,
+.social-col-title {
+  font-size: 1em;
+  color: var(--color);
+  font-weight: 500;
+}
+
+.social-media {
+  flex-direction: column;
+}
+
+.social-media-list {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-media-list a {
+  padding: 0.5em;
+  color: var(--color-smooth);
+  display: flex;
+  border-radius: 0.3em;
+  transition: all 0.25s ease 0s;
+}
+
+.social-media-list a:hover,
+.social-media-list a:focus {
+  color: var(--color);
+  background: #ffffff1a;
+}
+
+.social-media-list svg {
+  width: 1.5em;
+  height: 1.5em;
+  transition: all 0.25s ease 0s;
+}
+
+@media screen and (max-width: 750px) {
+  footer {
+    padding: 2em;
+    flex-direction: column;
+  }
+}
+
+</style>
+
+</head>
+
+<body onload="myInit()">
+
+
+    <canvas id='myCanvas'></canvas>
+    <img src="plan.png" usemap="#image-map"   id="imgID" width="100%" height="100%">
+    <map name="image-map">
+        
+
+          
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('ENTREPRENEURSHIP')"   coords="496,421,496,367,489,362,405,361,398,344,387,336,371,336,359,346,355,361,273,362,266,367,266,421,273,428,485,429" shape="poly" href="#" title="View Files" >
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('ARABIC')"            coords="726,424,728,371,721,361,667,360,659,344,646,336,630,336,618,346,612,362,563,362,555,368,557,420,563,429,719,430" shape="poly" href="#" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('C++')"                coords="792,362,784,371,784,421,793,429,981,431,990,423,990,371,981,362,910,362,908,350,896,340,877,340,866,350,864,362" shape="poly" href="#" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('intro')"       coords="1273,358,1203,358,1191,340,1179,336,1166,336,1156,342,1147,359,1071,360,1062,369,1062,429,1069,438,1272,438,1284,429,1283,368" shape="poly" href="#" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('calc1')"   coords="1498,420,1498,368,1490,360,1436,358,1431,343,1418,334,1403,334,1390,344,1386,358,1331,360,1325,366,1325,418,1331,426,1492,426,1498,420" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('ENGLISH')"      coords="1696,356,1651,356,1643,339,1630,332,1615,332,1606,340,1599,356,1555,356,1548,365,1548,415,1555,425,1698,425,1707,414,1706,366" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('MILITARY')"    coords="351,538,352,485,345,475,288,475,281,458,270,450,254,450,242,460,238,475,184,474,176,483,176,537,184,544,343,544,351,538" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('discrete')"       coords="601,538,602,485,595,475,538,475,531,458,520,450,504,450,492,460,488,475,434,474,426,483,426,537,434,544,593,544,601,538" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('LEADER')"      coords="943,472,856,473,847,458,836,450,821,450,810,458,806,473,706,474,698,482,698,534,706,541,947,541,954,534,954,480" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('object')"     coords="1294,474,1206,473,1197,457,1186,450,1171,450,1160,458,1156,473,1066,474,1059,484,1060,534,1069,541,1294,541,1303,534,1301,480" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('calc2')"     coords="1582,535,1581,484,1572,475,1518,473,1510,457,1500,448,1485,448,1472,459,1468,473,1411,475,1405,482,1405,534,1412,541,1575,541" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('SKILLS')"     coords="1800,472,1755,472,1747,455,1734,448,1719,448,1710,456,1703,472,1659,472,1650,481,1650,536,1657,542,1804,542,1811,530,1810,482" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('data')"     coords="591,703,592,650,585,640,529,640,523,623,510,615,494,615,482,625,478,640,424,639,416,648,416,702,424,709,583,709,591,703" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('java')"    coords="858,639,784,640,776,623,763,616,748,616,739,624,732,640,656,640,650,645,650,699,657,708,856,708,867,701,867,647" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('uml')"     coords="1138,641,1074,640,1066,623,1053,616,1038,616,1029,624,1022,640,958,641,949,647,949,699,958,708,1138,708,1147,701,1147,647" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('web')"      coords="1423,709,1432,701,1432,649,1423,640,1359,639,1353,624,1338,615,1322,618,1312,626,1307,639,1242,639,1234,647,1234,697,1242,708" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('digital')"     coords="1689,641,1625,640,1617,623,1604,616,1589,616,1580,624,1573,640,1509,639,1500,647,1500,699,1509,708,1689,708,1698,701,1698,647" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('COMMUNICATION')"    coords="470,756,394,757,386,740,373,730,358,733,349,741,342,757,266,757,260,762,260,816,266,823,470,823,477,814,478,762" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('algo')"     coords="821,758,730,757,723,740,712,732,696,732,684,742,680,757,591,757,583,764,583,818,591,825,819,825,828,818,828,764" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('software')"      coords="1067,757,988,757,980,740,967,733,952,733,943,741,936,757,850,757,843,765,843,818,850,824,1067,824,1075,816,1075,764" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('database')"     coords="1369,756,1277,755,1268,740,1257,732,1242,732,1231,740,1227,755,1129,756,1123,764,1123,815,1131,823,1374,823,1381,815,1379,764" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('prob')"     coords="1650,754,1576,755,1568,738,1555,731,1540,731,1531,739,1524,755,1448,755,1442,760,1442,814,1448,821,1652,821,1659,812,1657,760" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('network')"     coords="152,915,143,926,143,976,152,984,341,984,350,976,350,924,341,915,270,915,268,903,256,893,237,893,226,903,222,915" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('c#')"     coords="393,915,383,926,385,976,393,984,582,984,591,976,591,924,582,915,511,915,509,903,497,892,478,892,467,903,465,915" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('documentation')"   coords="637,914,628,923,629,975,637,983,826,983,835,975,835,923,826,914,755,914,753,902,741,892,722,892,711,902,709,914" shape="poly"    shape="rect" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('analysis')"    coords="901,914,891,923,891,975,899,983,1088,983,1097,975,1097,923,1088,914,1017,914,1015,902,1003,892,984,892,973,902,971,914"  shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('requirements')"    coords="1140,916,1131,924,1131,975,1140,983,1330,983,1340,974,1340,924,1329,916,1260,914,1258,906,1244,892,1224,892,1213,902,1210,914"   shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('webapp')"   coords="1381,915,1372,926,1373,976,1381,984,1570,984,1579,976,1579,924,1570,915,1499,915,1497,903,1485,893,1466,893,1455,903,1453,915" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('numerical')"   coords="1861,973,1863,920,1856,911,1796,911,1791,895,1777,887,1764,888,1751,897,1747,911,1696,911,1687,917,1687,972,1694,979,1854,979" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('lab2')"    coords="381,1034,301,1036,294,1019,283,1011,267,1011,255,1021,251,1036,169,1037,162,1042,162,1096,169,1103,381,1103,388,1095,388,1042" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('os')"    coords="665,1034,575,1036,568,1019,557,1011,541,1011,529,1021,525,1036,435,1036,426,1044,427,1095,435,1103,665,1103,674,1097,674,1042" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('hci')"    coords="986,1037,890,1036,883,1019,872,1011,856,1011,844,1021,840,1036,743,1037,737,1044,739,1096,745,1104,984,1104,993,1096,993,1044" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('client')"     coords="1278,1037,1192,1036,1184,1019,1171,1012,1156,1012,1144,1021,1140,1036,1054,1036,1047,1044,1047,1097,1054,1103,1278,1104,1287,1097,1285,1043" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('architecture')" alt="View Files"   coords="1833,1037,1737,1036,1730,1019,1719,1011,1703,1011,1691,1021,1687,1036,1590,1037,1584,1044,1585,1096,1592,1104,1831,1104,1840,1096,1840,1044" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('testing')"    coords="778,1204,769,1213,769,1265,776,1272,965,1272,973,1264,973,1214,965,1205,897,1204,892,1191,880,1180,863,1180,850,1191,848,1203" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('pm')"    coords="1054,1204,1045,1213,1045,1265,1052,1272,1241,1272,1248,1264,1248,1212,1241,1205,1173,1204,1168,1191,1156,1180,1139,1180,1126,1191,1124,1203" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('webengineering')"    coords="1333,1204,1324,1213,1324,1265,1331,1272,1520,1272,1529,1264,1529,1212,1520,1203,1452,1204,1447,1191,1435,1180,1418,1180,1405,1191,1403,1203" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('security')"    coords="1617,1204,1608,1213,1608,1265,1615,1272,1804,1272,1813,1264,1813,1212,1804,1203,1736,1204,1731,1191,1720,1181,1702,1181,1691,1190,1687,1203" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('elective1')"    coords="916,1387,916,1336,910,1327,848,1324,843,1309,829,1301,816,1302,803,1311,799,1325,740,1327,734,1334,734,1384,738,1393,905,1394" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('elective2')"   coords="1190,1387,1190,1336,1184,1327,1122,1324,1117,1309,1103,1301,1090,1302,1077,1311,1073,1325,1014,1327,1008,1334,1008,1384,1012,1393,1179,1394" shape="poly" title="View Files">
+        <area onmouseover="myHover(this);" onmouseout="myLeave();" onclick="on('elective3')"    coords="1446,1387,1446,1336,1440,1327,1378,1324,1373,1309,1359,1301,1346,1302,1333,1311,1329,1325,1270,1327,1264,1334,1264,1384,1268,1393,1435,1394" shape="poly" title="View Files">
+
+
+
+    </map>
+
+
+<div id='ENTREPRENEURSHIP' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a target="_blank">لا يوجد</a>
+    </div>
+</div>
+
+<div id='ARABIC' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a target="_blank">لا يوجد</a>
+    </div>
+</div>
+    
+<div id='C++' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3z1b1an' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://bit.ly/3FuZPVQ' target="_blank">اسئـــــلة سنوات</a>
+    </div>
+</div>
+
+<div id='intro' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a target="_blank">لا يوجد</a>
+    </div>
+</div>
+
+<div id='calc1' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3JjGk5a' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://bit.ly/3yYKrPb' target="_blank">اسئـــــلة سنوات</a>
+        
+    </div>
+</div>
+
+<div id='ENGLISH' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a target="_blank">لا يوجد</a>
+    </div>
+</div>
+
+<div id='MILITARY' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a target="_blank">لا يوجد</a>
+    </div>
+</div>
+
+<div id='discrete' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3qmgiWd' target="_blank"> شروحات + اسئلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PLVS43mVhT_-T836cBf2E2iLHMHFg0PN0i' target="_blank">فيديوهات</a>
+    </div>
+</div>
+
+<div id='LEADER' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a target="_blank">لا يوجد</a>
+    </div>
+</div>
+
+<div id='object' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3EsGPpC' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://bit.ly/3poB9cc' target="_blank">اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/watch?v=euEFSDYM7S8&list=PL8gkpIDjEtH3at1BwEsL74tmKCQloGuyY&ab_channel=SoftwarianTeam' target="_blank">فيديوهات</a>
+    </div>
+</div>
+
+<div id='calc2' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+
+        <a href='https://bit.ly/33Mpnjk' target="_blank"> شروحات + اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PLe4bhuZ4w9d3j6aGhLiZmHRw64uVQQpit' target="_blank">فيديوهات</a>
+
+    </div>
+</div>
+
+<div id='SKILLS' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a target="_blank">لا يوجد</a>
+    </div>
+</div>
+
+<div id='data' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://drive.google.com/drive/folders/1somLwplXeDPOCpEsp9VcFOIasSSUzzBv' target="_blank"> شروحات</a>
+        <hr>
+        <a href='https://bit.ly/33Y2Mk4' target="_blank">اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PLVS43mVhT_-SN71dtaysWFEL5iRjfRIPD' target="_blank">فيديوهات</a>
+    </div>
+</div>
+
+<div id='java' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://drive.google.com/drive/folders/1fxH9bZs7KrmYbtCFXgTRT0zBDvUaW4Hk?usp=sharing' target="_blank">شروحات + اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PLe4bhuZ4w9d3j6aGhLiZmHRw64uVQQpit' target="_blank">فيديوهات</a>
+
+    </div>
+</div>
+
+<div id='uml' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://drive.google.com/drive/folders/1kgq0f1cJfNaKsHF-fe-te0XwcMEzVSAg?fbclid=IwAR1SoffbwKYD8PtppXTm3LF6DdBfAqS8GBrgI9HGI70zHtav850wGyz_Mhw' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://bit.ly/3EpOxRx' target="_blank">اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PL8gkpIDjEtH1zsf3F-ePyr-OZpjGziYoU' target="_blank">فيديوهات</a>
+
+    </div>
+</div>
+
+<div id='web' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3HcrKKI' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://bit.ly/3HcrKKI' target="_blank">اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PLy42_pl2XRL4Dd7WhHWX6B3HYInKppZfP' target="_blank">فيديوهات</a>
+    </div>
+</div>
+
+<div id='digital' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3Fv8d7R' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://bit.ly/3yZLQFq' target="_blank">اسئـــــلة سنوات</a>
+    </div>
+</div>
+
+<div id='COMMUNICATION' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a target="_blank">لا يوجد</a>
+    </div>
+</div>
+
+<div id='algo' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://drive.google.com/drive/folders/1Ff-b0JuVYQO5ji50yi4mPr16h_JTa9Nv' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://bit.ly/3yWn9cN' target="_blank">اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PLVS43mVhT_-S7zm1yoBPuigSkWFlDuJ6d' target="_blank" >فيديوهات</a>
+
+    </div>
+</div>
+
+<div id='software' class="overlay" >
+    <div id='text'>
+        <div>  
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3H9r5tB' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://bit.ly/3Et90oL' target="_blank">اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PLVS43mVhT_-SQhP6RiYfEVVluU4r9z1SE' target="_blank">فيديوهات</a>
+
+
+    </div>
+</div>
+
+<div id='database' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://drive.google.com/drive/folders/1DksFUvXkmu1sMSodW5YlkiRdcZt6BsoK' target="_blank"> شروحات  + اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PLVS43mVhT_-SsN50ztM0MVIVppMo2sD4n' target="_blank">فيديوهات</a>
+        
+    </div>
+</div>
+
+<div id='prob' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3qryJsq' target="_blank"> شروحات  + اسئـــــلة سنوات</a>
+
+    </div>
+</div>
+
+<div id='network' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/30Y5N2B' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://drive.google.com/drive/folders/1fEUm-Df7ZpV6FMNbj6EIwxfCA9qHXRMC?fbclid=IwAR23iN3ur17cCq79_CeAx2bSBp4iGcBvRtRK7gLvxkGZNfP9T2aE9q1Mm-o' target="_blank">اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PLRgW4R8PpA6D3Vf-tMsRx_PgnoZH4YJV0' target="_blank">فيديوهات</a>
+
+    </div>
+</div>
+
+<div id='c#' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://drive.google.com/drive/folders/1XLQ3mLUjRaouiJ7UxK3esx_1hrh4RsDs?fbclid' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://bit.ly/3sG0NLk' target="_blank">اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PLcy9pLDPXtFNW-0WT-_pE4Q-zikDtw6zT' target="_blank">فيديوهات</a>
+
+
+    </div>
+</div>
+
+<div id='documentation' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3prxg6o' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://bit.ly/3mzOKvl' target="_blank">اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PL8gkpIDjEtH3XckbMNzX1NRovTAsJGe7s' target="_blank">فيديوهات</a>
+
+    </div>
+</div>
+
+<div id='analysis' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3JhISRm' target="_blank"> شروحات</a>
+        <hr>
+        <a href='https://bit.ly/3Fx8qaI' target="_blank">اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PL8gkpIDjEtH1V6TiYbk1iMeuKZwcWm11O' target="_blank">فيديوهات</a>
+    </div>
+</div>
+
+<div id='requirements' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/32pLegf' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://bit.ly/3EsHDLa' target="_blank">اسئـــــلة سنوات</a>
+    </div>
+</div>
+
+<div id='webapp' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3pqvpi4' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://bit.ly/3qrz0LY' target="_blank">اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://youtube.com/playlist?list=PL8gkpIDjEtH2PJDiMK9Xq3Zo2G6ZKD20M' target="_blank">فيديوهات</a>
+    </div>
+</div>
+
+<div id='numerical' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3poBPyg' target="_blank"> شروحات + اسئلة سنوات</a>
+    </div>
+</div>
+
+<div id='lab2' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3z5Pc9S' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PL8gkpIDjEtH2Cthp5QrJgJYqbYKN4VwsG' target="_blank">فيديوهات</a>
+    </div>
+</div>
+
+<div id='os' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3FtUYo4' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://bit.ly/3yYLjDr' target="_blank">اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PL8gkpIDjEtH34WaeSpGChq8zjr3-55Xx8' target="_blank">فيديوهات</a>
+    </div>
+</div>
+
+<div id='hci' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://drive.google.com/drive/folders/12FfgOAW_whggq47C8dAypC0DJEeCOA9h?fbclid=IwAR0DXyf1F7fbfWX5_lidWa8z1QzO4-wuSTMWGeLaDSCD6UiU6GgFMI8RrGY' target="_blank"> شروحات + اسئلة سنوات </a>
+
+    </div>
+</div>
+
+<div id='client' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+
+        <a href='https://bit.ly/3ElCZ1K' target="_blank">اسئـــــلة سنوات</a>
+
+    </div>
+</div>
+
+<div id='architecture' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3sypyt9' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://bit.ly/3JgcKgS' target="_blank">اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PL8gkpIDjEtH1hyr9SF16XlimiPt0cj_Kx' target="_blank">فيديوهات</a>
+    </div>
+</div>
+
+<div id='testing' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+
+        <a href='https://bit.ly/3sz3ZIW' target="_blank">اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PL8gkpIDjEtH2n-W3Talar6Rsb0RCW_Fvn' target="_blank">فيديوهات</a>
+    </div>
+</div>
+
+<div id='pm' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+
+        <a href='https://bit.ly/3qHrsVR' target="_blank">اسئـــــلة سنوات</a>
+
+    </div>
+</div>
+
+<div id='webengineering' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3JjLRIM' target="_blank"> شروحات </a>
+        <hr>
+        <a href='https://bit.ly/3ptcYsU' target="_blank">اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PLuB2827yobpys02787RgKmYYWwH3UO7An' target="_blank">فيديوهات</a>
+
+    </div>
+</div>
+
+<div id='security' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+        <a href='https://bit.ly/3rNAse9' target="_blank">شروحات + اسئـــــلة سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PLuB2827yobpzj7MB6pi4ZcRAjft30udMK' target="_blank"> فيديوهات</a>
+
+    </div>
+</div>
+
+<div id='elective1' class="overlay " >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+    
+        <a href='https://bit.ly/30WAHIG' target="_blank"> اندرويد شروحات</a>
+        <hr>
+        <a href='https://bit.ly/3JdkLTT' target="_blank">اندرويد سنوات</a>
+        <hr>
+        <a href='https://www.youtube.com/playlist?list=PLVS43mVhT_-Rgu42rDqjbCtmcFknSjbLO' target="_blank"> فيديوهات</a>
+
+    </div>
+</div>
+
+<div id='elective2' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+
+        <a href='https://bit.ly/3H5UJje' target="_blank">اوراكل شروحات + سنوات</a>
+
+    </div>
+</div>
+
+<div id='elective3' class="overlay" >
+    <div id='text'>
+        <div>
+            <a href="#" class="team-popup-close" onclick='off()'>&times;</a>
+        </div>
+
+        <a href='https://bit.ly/3ElMu0Q' target="_blank"> بايثون شروحات</a>
+        <hr>
+        <a href='https://bit.ly/33WMMPk' target="_blank">بايثون سنوات</a>
+
+    </div>
+</div>
+
+    
+    <script>
+        imageMapResize();
+
+        function on(e) {
+            document.getElementById(e).style.display = "block";
+        }
+
+        function off() {
+            var el = document.getElementsByClassName("overlay");
+            for (var i = 0; i < el.length; i++) {
+                el[i].style.display = "none";
+            }
+        }
+
+    </script>
+
+<p style="font-family: El Messiri;color:white;; font-size: 40px;position: relative;bottom: -30px;">تابعونا على </p>
+        <div id="dedo">
+        <ul>
+          <li><a class="Anc" href="https://www.facebook.com/groups/softwarian" target="_blank">
+              <i class="fab fa-facebook" tabindex="0"></i>
+            </a></li>
+            
+          <li><a class="Anc" href="https://www.instagram.com/softwarian/" target="_blank">
+              <i class="fab fa-instagram" tabindex="0"></i>
+            </a></li>
+          <li><a class="Anc" href="https://www.youtube.com/channel/UCQ12MLtVnWdpxY9O0THe2Fg">
+              <i class="fab fa-youtube" tabindex="0" target="_blank"></i>
+            </a></li>
+        </ul>
+      </div> 
+
+      <br>
+
+      <h2 ><span class ="momen" style="font-family: El Messiri;font-size: 12px; ">عمل الطالب: مؤمن المحسيري</span></h2>
+        </body>
+
+</html>
